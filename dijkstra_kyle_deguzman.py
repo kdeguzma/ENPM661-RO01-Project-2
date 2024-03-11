@@ -240,7 +240,7 @@ width = 1200-5 # -5 to account for 5 mm clearance of robot
 height = 500-5
 
 # ANIMATION/VISUALIZATION CODE
-#ig, ax = plt.subplots()
+fig, ax = plt.subplots()
 allnodes = solver(width, height, startx, starty, goalx, goaly)
 realpath = dijkstra(startx, starty, goalx, goaly, allnodes)
 print("Best Path:", realpath)
