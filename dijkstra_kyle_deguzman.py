@@ -248,7 +248,7 @@ xcoord = []
 ycoord = []
 costlist = []
 
-for this_node in allnodes:
+for this_node in realpath:
 	xcoord.append(this_node.xnode)
 	ycoord.append(this_node.ynode)
 	costlist.append(this_node.cost)
