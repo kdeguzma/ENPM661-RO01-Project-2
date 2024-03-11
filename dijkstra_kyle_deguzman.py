@@ -87,16 +87,16 @@ def obstacles(nodex, nodey):
 	if xcoord >= 265 and xcoord <= 350 and ycoord <= 400: # Obstacle, Second rectangle
 		return True
 	if xcoord >= (645 - 77.5*math.sqrt(3)) and xcoord <= 645:  # Obstacle, Hexagon # Left to middle
-		if ycoord <= (xcoord/math.sqrt(3)) - (645/math.sqrt(3)) + 400: # Upper left hexagon line
+		if ycoord <= (xcoord/math.sqrt(3)) - (645/math.sqrt(3)) + 400 and xcoord <= 645 and ycoord >= 322.5: # Upper left hexagon triangle
 			return True
-		if ycoord >= (-xcoord/math.sqrt(3)) + (645/math.sqrt(3)) + 90: # Lower left hexagon line
+		if ycoord >= (-xcoord/math.sqrt(3)) + (645/math.sqrt(3)) + 90 and xcoord <= 645 and ycoord <= 167.5: # Lower left hexagon triangle
 			return True
 	if xcoord >= (645 - 77.5*math.sqrt(3)) and xcoord <= (645 + 77.5*math.sqrt(3)) and ycoord >= 167.5 and ycoord <= 322.5: # Middle rectangle in hexagon 
 			return True
 	if xcoord >= 645 and xcoord <= (645 + 77.5*math.sqrt(3)): # Middle to right
-		if ycoord <= (-xcoord/math.sqrt(3)) + (645/math.sqrt(3)) + 400: # Upper right hexagon line
+		if ycoord <= (-xcoord/math.sqrt(3)) + (645/math.sqrt(3)) + 400 and xcoord >= 645 and ycoord >= 322.5: # Upper right hexagon triangle
 			return True
-		if ycoord >= (xcoord/math.sqrt(3)) - (645/math.sqrt(3)) + 90: # Lower right hexagon line
+		if ycoord >= (xcoord/math.sqrt(3)) - (645/math.sqrt(3)) + 90 and xcoord >= 645 and ycoord <= 167.5: # Lower right hexagon triangle
 			return True
 	if xcoord >= 890 and xcoord <= 1100 and ycoord >= 365 and ycoord <= 450: # Obstacle, C shape (3 rectangles) # Top rectangle
 		return True
